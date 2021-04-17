@@ -4,6 +4,7 @@
 .nav-container {
   background: rgb(7, 7, 7);
 }
+//boa navbar! Atenção ao nav que ele criou dentro para que o logo ficasse por detras do background preto
 nav {
   width: 80%;
   margin: auto;
@@ -11,4 +12,14 @@ nav {
   padding: 3rem 0rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  #Logo {
+    flex: 1;
+  }
 }
