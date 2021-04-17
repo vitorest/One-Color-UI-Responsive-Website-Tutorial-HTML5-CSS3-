@@ -13,13 +13,33 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  //flex no ul e no logo faz com que os 3 items (2 li + logo) fiquem evenly spaced - com spacearound
   ul {
     display: flex;
     justify-content: space-between;
     flex: 1;
   }
-  #Logo {
-    flex: 1;
+  #logo {
+    flex: 3;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6rem;
+      height: 6rem;
+      background: #f54538;
+      border-radius: 50%;
+      transform: translate(-10%, -20%);
+      //é tipo z-index, neste caso coloca o red background atras do letring(logo)
+      mix-blend-mode: screen;
+    }
+  }
+  //styiling Order button
+  .order {
+    background: #f54538;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
   }
 }
