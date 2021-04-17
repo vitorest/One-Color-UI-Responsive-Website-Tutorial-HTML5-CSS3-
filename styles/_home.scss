@@ -17,11 +17,14 @@ nav {
   ul {
     display: flex;
     justify-content: space-between;
+    //usando o total do espaço disponivel
     flex: 1;
   }
   #logo {
+    // usando 3/4 do espaço disponivel - faz shrink no flex do ul e passa a contemplar so 3/4
     flex: 3;
     position: relative;
+    // para adicionar coisas no CSS, sem usar o HTML
     &::after {
       content: "";
       position: absolute;
