@@ -19,6 +19,7 @@ nav {
     justify-content: space-between;
     //usando o total do espaço disponivel
     flex: 1;
+    list-style: none;
   }
   #logo {
     // usando 3/4 do espaço disponivel - faz shrink no flex do ul e passa a contemplar so 3/4
@@ -44,5 +45,34 @@ nav {
     background: #f54538;
     padding: 1rem 2rem;
     border-radius: 2rem;
+  }
+}
+.showcase {
+  display: grid;
+  min-height: 90vh;
+  // grid-template-columns: 10% repeat(3, minmax(5rem, 1fr));
+  grid-template-columns: 10% repeat (3, minmax(5rem, 1fr));
+  grid-template-rows: 1fr 2fr 1fr;
+
+  h2 {
+    grid-column: 2/3;
+    align-self: flex-end;
+  }
+  img {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    height: 120%;
+    // fixes the object in its Grid position.
+    object-fit: cover;
+    // align and justify center does fix the object in the centera
+    align-self: center;
+    justify-self: center;
+  }
+  .info {
+    grid-row: 3/4;
+    grid-column: 4/5;
+    h3 {
+      padding-bottom: 3rem;
+    }
   }
 }
