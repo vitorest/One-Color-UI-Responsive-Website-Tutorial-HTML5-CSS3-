@@ -54,7 +54,7 @@ a {
 }
 
 .nav-container {
-  background: #070707;
+  background: #111111;
 }
 
 nav {
@@ -94,7 +94,7 @@ nav #logo {
 }
 
 nav #logo::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -117,8 +117,8 @@ nav .order {
   display: -ms-grid;
   display: grid;
   min-height: 90vh;
-  -ms-grid-columns: 10% repeat 3, minmax(5rem, 1fr);
-      grid-template-columns: 10% repeat 3, minmax(5rem, 1fr);
+  -ms-grid-columns: 10% (1fr)[3] 10%;
+      grid-template-columns: 10% repeat(3, 1fr) 10%;
   -ms-grid-rows: 1fr 2fr 1fr;
       grid-template-rows: 1fr 2fr 1fr;
 }

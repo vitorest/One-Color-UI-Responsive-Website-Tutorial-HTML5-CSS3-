@@ -3,6 +3,8 @@
 
 // faz com que 1 rem = 10px - just an approach
 html {
+  // to work with rems - with 62.5% you scale rem to 10px
+  // vai fazer com que tudo fique mais pequeno, mas ajustas em baixo, como consegues ver
   font-size: 62.5%;
 }
 * {

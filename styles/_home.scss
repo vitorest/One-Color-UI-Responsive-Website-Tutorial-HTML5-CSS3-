@@ -2,10 +2,12 @@
   background: radial-gradient(#525252, #131313);
 }
 .nav-container {
-  background: rgb(7, 7, 7);
+  background: rgb(17, 17, 17);
 }
 //boa navbar! Atenção ao nav que ele criou dentro para que o logo ficasse por detras do background preto
 nav {
+  // a width e o margin auto é para dar margem de 10% nos lados.
+  // Se o background do nav-container fosse posto aqui, o sobrante espaço ia ficar branco..
   width: 80%;
   margin: auto;
   min-height: 10vh;
@@ -16,9 +18,12 @@ nav {
   //flex no ul e no logo faz com que os 3 items (2 li + logo) fiquem evenly spaced - com spacearound
   ul {
     display: flex;
+    // para que as margens fiquem todas alinhadas (com 10% de espaço à volta de ambas
+    // usas o space-between
     justify-content: space-between;
-    //usando o total do espaço disponivel
+    //usando o total do espaço disponivel (já om os 80% da with da nav
     flex: 1;
+    // get rid of the dots
     list-style: none;
   }
   #logo {
@@ -27,7 +32,7 @@ nav {
     position: relative;
     // para adicionar coisas no CSS, sem usar o HTML
     &::after {
-      content: "";
+      content: " ";
       position: absolute;
       top: 0;
       left: 0;
@@ -51,7 +56,8 @@ nav {
   display: grid;
   min-height: 90vh;
   // grid-template-columns: 10% repeat(3, minmax(5rem, 1fr));
-  grid-template-columns: 10% repeat (3, minmax(5rem, 1fr));
+  grid-template-columns: 10% repeat(3, 1fr) 10%;
+  // 2fr para o centro ser maior, 1fr para os lados
   grid-template-rows: 1fr 2fr 1fr;
 
   h2 {
